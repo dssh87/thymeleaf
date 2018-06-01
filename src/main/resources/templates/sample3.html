@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+  
+  <table border="1">
+    <tr>
+      <td>MID</td>
+      <td>MNAME</td>
+      <td>REGDATE</td>
+    </tr>
+    
+    <tr th:each="vo : ${list}">
+       <td th:text="${vo.mid}"></td>
+       <td th:text="${vo.mname}">Doe</td>
+       <td th:text="${#dates.format(vo.regdate, 'yyyy-MM-dd')}"></td>
+     </tr>    
+    
+  </table>
+  
+</body>
